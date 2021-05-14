@@ -1,0 +1,38 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <div class="container">
+      <p id="notice"><%= notice %></p>
+      
+      <div class="row">
+        <% @stores.each do |store| %>
+        <div class="card col-lg-3 text-center" style="width: 18rem; margin: 40px;">
+          <div class="card-body">
+            <div id="map-container-google-9" class="z-depth-1-half map-container-5" style="height: 200px; width: 200px; overflow:hidden; padding-bottom:56.25%; position:relative; height:0;">
+            <iframe src="https://maps.google.com/maps?q=Madryt&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+            style="border:0" allowfullscreen></iframe>
+            </div>
+              
+            <h5 class="card-title text-center"><%= link_to store.name, store_path(store) %></h5>
+            <span class="badge badge-info"><%= store.status %> cuisine</span>
+            <span class="badge badge-warning"><%= store.reviews.sample.note %></span>
+            <p class="card-text"><%= "#{store.address}, #{store.city}, #{store.state} #{store.zip}" %></p>
+            <p class="card-text"><%= "Rating: #{store.rating} - #{store.reviews.all.count} reviews" %></p>
+            
+          </div>
+        </div>
+        <% end %> 
+        <div class="card col-lg-3 text-center" style="width: 18rem; margin: 40px;">
+          <div class="card-body">
+            <%= link_to 'Add New Store', new_store_path, class: "btn btn-outline-primary" %>
+          </div>
+            
+        </div>
+      </div>
+      
+      
+    </div>
+    <br>
+</body>
+</html>
