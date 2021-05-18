@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app was created with the purpose of getting familiarized with Embedded Ruby, Rails framework and ingrated Bootstrap.
 
-Things you may want to cover:
+All data is dummy, generated randomly with the sole purpose of practicing. The script for generating data for this app is /db/seeds.rb.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Besides implementing Bootstrap, Devise library was also implemented for the author to familiarize with how to handle user's registration, logins, etc.
